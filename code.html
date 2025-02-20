@@ -83,7 +83,7 @@ function getValues() {
     startValue = parseInt(startValue);
     endValue = parseInt(endValue);
 
-    if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+    if (Number.isInteger(startValue) &amp&amp Number.isInteger(endValue)) {
     //we call generateNumbers
     let numbers = generateNumbers(startValue, endValue);
      //we call displayNumbers
@@ -102,7 +102,7 @@ function generateNumbers(sValue, eValue){
 
     //we need to validate our input
     //we want to get all numbers from start to end using a loop
-    for (let index = sValue; index <= eValue; index++){
+    for (let index = sValue; index &amplt= eValue; index++){
 
         //this will execute in a loop until index  = eValue
         numbers.push(index);
@@ -119,7 +119,7 @@ function displayNumbers(numbers) {
 
     let className = "even";
 
-    for (let index = 0; index < numbers.length; index++) {
+    for (let index = 0; index &amplt numbers.length; index++) {
 
         let number = numbers[index];
 
@@ -129,21 +129,20 @@ function displayNumbers(numbers) {
         else{
             className = "odd"
         }
-
-        //This does not render correctly with Prism, check the source
-        templateRows += `<tr><td class = "${className}" >${number}</td></tr>`
+        templateRows += `&amplttr>&amplttd class = "${className}" >${number}&amplt/td>&amplt/tr>`
     }
 
     document.getElementById("results").innerHTML = templateRows;
 }
+</code></pre>
 
 
-                    </code></pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structured in one function</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message "Hello World"</p>
+                    <!--<p>The Code is structured in one function</p>-->
+                    <h2>Project Documentation: A Number Sequence Generator called Ekato</h2>
+                    <h6>Overview</h6>
+                    <p></p>
                 </div>
             </div>
         </div>
