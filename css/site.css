@@ -68,7 +68,14 @@ code[class*="language-"],
         font-style: normal;
 }
 
+.odd{
+    font-weight: 100;
+}
 
+.even{
+    font-weight: bold;
+    font-size: la   rge;
+}
 
 
 
