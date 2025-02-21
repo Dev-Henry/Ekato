@@ -70,7 +70,7 @@
         <div class="container py-4 px-5 mt-5">
             <h2 class="border-1 border-bottom border-dark">The Code for Ekato</h2>
             <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <pre class="line-numbers"><code class="language-javascript">
                         //get the values from the interface
 //start or controller function
@@ -138,11 +138,66 @@ function displayNumbers(numbers) {
 
 
                 </div>
-                <div class="col-lg-4">
-                    <!--<p>The Code is structured in one function</p>-->
-                    <h2>Project Documentation: A Number Sequence Generator called Ekato</h2>
+                <div class="col-lg-5">
+                    <h2 class="text-dark">Project Documentation: A Number Sequence Generator called Ekato</h2>
                     <h6>Overview</h6>
-                    <p></p>
+                    <p>
+                        This JavaScript project consists of three main functions that work together to: <br>
+                       <strong> 1. Get a number range <br>
+                        2. Input from users <br>
+                        3. Generate a sequence of numbers<br> </strong>
+                        It will display the numbers with even numbers styled differently (that is make them bold) from odd numbers<br>
+                        The project takes a start value and end value from HTML input elements and displays all numbers in that range in a table format.
+                    </p>
+
+                    <h3>Functions</h3>
+                    <h6>Function 1 : getValues()</h6>
+                    <p> 
+                        <strong>Purpose:</strong> Controller function that initiates the program flow <br>
+                        <strong>Description:</strong> Retrieves input values from the HTML interface, validates them, and coordinates the generation and display of numbers <br>
+                        <strong>Process:</strong> <br>
+                        1. Gets values from HTML elements with IDs <strong>"startValue"</strong> and <strong>"endValue"</strong><br>
+                        2. Converts string inputs to integers using <strong>parseInt()</strong><br>
+                        3. Validates that both inputs are integers using <strong>Number.isInteger()</strong><br>
+                        >> If valid:<br>
+                        > Calls <strong>generateNumbers()</strong> with the input values<br>
+                        > Passes the result to <strong>displayNumbers()</strong><br>
+                        >> If invalid:<br>
+                        > Shows an alert message:<strong> "You must enter an integer" </strong><br>
+                        <strong>Parameters: </strong> None <br>
+                        <strong>Returns: </strong> None 
+
+                        <h6>Function 2 : generateNumbers(sValue, eValue)</h6>
+                        <p>
+                        <strong>Purpose:</strong> Logic function that generates the number sequence <br>
+                        <strong>Description:</strong> Creates an array of numbers from the start value to the end value (inclusive) <br>
+                        <strong>Process:</strong> <br>
+                        1. Initializes an empty array <strong>numbers</strong><br>
+                        2. Uses a for loop to iterate from <strong>sValue</strong> to <strong>eValue</strong><br>
+                        3. Pushes each number into the <stong>numbers</stong> array<br>
+                        4. Returns the completed array<br>
+                        <strong>Parameters:</strong> <br>
+                        1. <strong>sValue(integer): </strong>Starting number of the sequence
+                        2. <strong>eValue(integer): </strong>Ending number of the sequence
+                        <strong>Returns: </strong> <br>
+                        >> Array of integers from <strong>sValue</strong> to <strong>eValue</strong>
+                        </p>
+
+                        <h6>Function 3 : displayNumbers(numbers)</h6>
+                        <strong>Purpose:</strong> View function that displays the generated numbers <br>
+                        <strong>Description:</strong> Creates and displays a table with numbers, styling even and odd numbers differently<br>
+                        <strong>Process:</strong> <br>
+                        1. Initializes an empty string <strong>templateRows</strong>for HTML content<br>
+                        2. Iterates through the numbers array <br>
+                        3. For each number: <br>
+                        >> Checks if it's even using modulo operator<strong>(number % 2 === 0)</strong> <br>
+                        >> Assigns class <strong>"even"</strong>or <strong>"odd"</strong> accordingly <br>
+                        >> Creates a table row with the number and appropriate class <br>
+                        4. Updates the innerHTML of element with ID <strong>"results"</strong> with the generated rows <br>
+                        <strong>Parameters:</strong> <br>
+                        >> <strong>numbers</strong> (array): Array of numbers to display <br>
+                        <strong>Returns: </strong> None 
+                    </p>
                 </div>
             </div>
         </div>
@@ -172,7 +227,7 @@ function displayNumbers(numbers) {
        <!-- Bootstrap JS -->
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
-   </script>
+   </script> 
 
    <script src="js/prism.js"></script>
 
@@ -185,7 +240,6 @@ function displayNumbers(numbers) {
             'right-trim': true
         })
    </script>
-
 </body>
 
 </html>

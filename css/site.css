@@ -77,7 +77,9 @@ code[class*="language-"],
     font-size: la   rge;
 }
 
-
+.pretext{
+    color: rgba(rgb(37, 114, 182), green, blue, alpha);
+}
 
 
     main>.container {
